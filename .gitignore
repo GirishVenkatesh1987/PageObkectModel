@@ -1,1 +1,9 @@
 .metadata
+**/.settings
+**/test-output
+**/target
+**/screenshots
+**/.classpath
+**/.project
+
+
