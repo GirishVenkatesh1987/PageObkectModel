@@ -1,7 +1,7 @@
 .metadata
 **/.settings
 **/test-output
-**/target
+target/
 **/screenshots
 **/.classpath
 **/.project
