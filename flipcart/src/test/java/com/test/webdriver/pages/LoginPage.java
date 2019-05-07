@@ -4,6 +4,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import com.test.webdriver.base.WebDriverBase;
 
@@ -29,7 +30,8 @@ public class LoginPage extends WebDriverBase {
 	
 	//Initializing the Page Objects:
 	public LoginPage(){
-		PageFactory.initElements(driver, this);
+		AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver, 100);
+		PageFactory.initElements(factory, this);
 	}
 	
 	//Actions:

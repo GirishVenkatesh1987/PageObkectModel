@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import com.test.webdriver.base.WebDriverBase;
 
@@ -31,7 +32,8 @@ public class HomePage extends WebDriverBase {
 
 	// Initializing the Page Objects:
 	public HomePage() {
-		PageFactory.initElements(driver, this);
+		AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver, 100);
+		PageFactory.initElements(factory, this);
 	}
 	
 	public String verifyHomePageTitle(){
